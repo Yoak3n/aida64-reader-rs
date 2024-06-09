@@ -1,9 +1,8 @@
-use std::io;
-use winreg::enums::*;
-use winreg::RegKey;
-use super::Data;
-
 pub fn read_from_reg() -> io::Result<Vec<Data>> {
+    use super::Data;
+    use std::io;
+    use winreg::enums::*;
+    use winreg::RegKey;
     let aida64_sensor_values = RegKey::predef(HKEY_CURRENT_USER)
         .open_subkey("Software\\FinalWire\\AIDA64\\SensorValues")?;
     let mut datas = Vec::new();

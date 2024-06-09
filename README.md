@@ -1,5 +1,9 @@
 ## Example
 
+```toml
+aida64-reader-rs = "*"
+```
+
 ```rs
 use std::collections::HashMap;
 use aida64_reader_rs::shm;

@@ -9,6 +9,7 @@ use winapi::um::memoryapi::{
 use serde_xml_rs::from_str;
 
 use super::Data;
+
 pub fn read_from_shared_memory() ->io::Result<Vec<Data>> {
     let name: Vec<u16> = OsStr::new("AIDA64_SensorValues")
         .encode_wide()
