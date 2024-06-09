@@ -1,0 +1,16 @@
+[package]
+name = "aida64-reader-rs"
+description = "AIDA64 reader"
+authors = ["Yoaken"]
+homepage = "https://github.com/Yoaken/aida64-reader-rs"
+repository = "https://github.com/Yoaken/serde-xml-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+winreg = "0.52"
+winapi = {version = "0.3.9",features = ["memoryapi","handleapi"]}
+serde = {version = "1", features = ["derive"]}
+serde-xml-rs ={ version = "0.6.0" }
