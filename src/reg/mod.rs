@@ -1,11 +1,10 @@
 use super::Data;
+use std::path::Path;
 use winreg::enums::HKEY_CURRENT_USER;
 use winreg::RegKey;
-use std::path::Path;
-pub fn read_from_reg() -> Result<Vec<Data>,Box<dyn std::error::Error>> {
+pub fn read_from_reg() -> Result<Vec<Data>, Box<dyn std::error::Error>> {
     let path = Path::new("Software\\FinalWire\\AIDA64\\SensorValues");
-    let aida64_sensor_values = RegKey::predef(HKEY_CURRENT_USER)
-        .open_subkey(path)?;
+    let aida64_sensor_values = RegKey::predef(HKEY_CURRENT_USER).open_subkey(path)?;
     let mut datas = Vec::new();
     for (name, value) in aida64_sensor_values.enum_values().map(|x| x.unwrap()) {
         let field = name.split(".").collect::<Vec<&str>>()[1];

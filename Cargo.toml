@@ -5,7 +5,7 @@ authors = ["Yoake"]
 license = "MIT"
 homepage = "https://github.com/Yoaken/aida64-reader-rs"
 repository = "https://github.com/Yoaken/serde-xml-rs"
-version = "0.1.2"
+version = "0.1.31"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
