@@ -1,7 +1,13 @@
 ## Example
 
 ```toml
+# default use feature "shm"(read data from shared memory)
+[dependencies]
 aida64-reader-rs = "*"
+
+# you can also choose feature "reg" (read data from registry)
+[dependencies]
+aida64-reader-rs = {version = "*", default-features = false, feature = ["reg"] }
 ```
 
 ```rs

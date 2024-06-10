@@ -1,10 +1,10 @@
 #[cfg(feature = "shm")]
 pub mod shm;
 #[cfg(feature = "reg")]
-pub mod registry;
+pub mod reg;
 use serde::Deserialize;
 
-#[derive(Deserialize)]
+#[derive(Debug,Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub struct Data {
     pub id: String,
