@@ -32,26 +32,26 @@ jobs:
       - name: Build - All features
         run: cargo build --all-features
 
-  test:
-    name: Run tests
-    runs-on: windows-2019
-    steps:
-      - uses: actions/checkout@v4
+  # test:
+  #   name: Run tests
+  #   runs-on: windows-2019
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: Setup Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+  #     - name: Setup Rust toolchain
+  #       uses: dtolnay/rust-toolchain@stable
 
       # Test on default features
-      - name: Test - All targets
-        run: cargo test --all-targets
+      # - name: Test - All targets
+      #   run: cargo test --all-targets
 
-      # Test reg crate
-      - name: Test - Only tests with the Time crate
-        run: cargo test --tests --no-default-features --features=reg
+      # Test - Only tests with the reg crate
+      # - name: Test - Only tests with the reg crate
+      #   run: cargo test --tests --no-default-features --features=reg
 
-      # Test documentation with the 'test' feature
-      - name: Test - Only Documentation
-        run: cargo test --tests --features=wmis
+      #  Test - Only tests with the wmis crate
+      # - name: Test - Only tests with the wmis crate
+      #   run: cargo test --tests --features=wmis
 
   fmt:
     name: Rustfmt

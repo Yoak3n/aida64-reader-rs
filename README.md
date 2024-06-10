@@ -9,6 +9,7 @@ aida64-reader-rs = "*"
 [dependencies]
 aida64-reader-rs = {version = "*", default-features = false, feature = ["reg"] }
 aida64-reader-rs = {version = "*", default-features = false, feature = ["wmis"] }
+
 ```
 
 ```rs
