@@ -15,7 +15,7 @@ mod tests;
 pub fn read_from_shared_memory() -> Result<Vec<Data>, Box<dyn std::error::Error>> {
     let name: Vec<u16> = OsStr::new("AIDA64_SensorValues")
         .encode_wide()
-        .chain(Some(0).into_iter())
+        .chain(Some(0))
         .collect();
     let handle = unsafe { OpenFileMappingW(FILE_MAP_ALL_ACCESS, FALSE, name.as_ptr()) };
     if handle.is_null() {
