@@ -19,7 +19,7 @@ pub fn read_from_shared_memory() -> Result<Vec<Data>, Box<dyn std::error::Error>
         .collect();
     let handle = unsafe { OpenFileMappingW(FILE_MAP_ALL_ACCESS, FALSE, name.as_ptr()) };
     if handle.is_null() {
-        return Err("OpenFileMappingW error".into());
+        return Err("OpenFileMappingW error,please check the status of AIDA64".into());
     }
     let map_view = unsafe { MapViewOfFile(handle, FILE_MAP_READ, 0, 0, 0) };
     if map_view.is_null() {
