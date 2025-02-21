@@ -5,10 +5,10 @@
 [dependencies]
 aida64-reader-rs = "*"
 
-# you can also choose feature "reg" (read data from registry) and feature "wmis" (read data from wmi)
-[dependencies]
-aida64-reader-rs = {version = "*", default-features = false, feature = ["reg"] }
-aida64-reader-rs = {version = "*", default-features = false, feature = ["wmis"] }
+# you can also choose feature "reg" (read data from registry) and feature "wmi" (read data from wmi)
+# [dependencies]
+# aida64-reader-rs = {version = "*", default-features = false, feature = ["reg"] }
+# aida64-reader-rs = {version = "*", default-features = false, feature = ["wmi"] }
 
 ```
 

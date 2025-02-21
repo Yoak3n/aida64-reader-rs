@@ -3,8 +3,8 @@ pub mod reg;
 #[cfg(feature = "shm")]
 pub mod shm;
 use serde::Deserialize;
-#[cfg(feature = "wmis")]
-pub mod wmis;
+#[cfg(feature = "wmi")]
+pub mod wmi;
 
 #[derive(Debug, Deserialize)]
 #[serde(rename = "AIDA64_SensorValues")]

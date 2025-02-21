@@ -1,4 +1,4 @@
-use wmi::*;
+use wmi::{COMLibrary, WMIConnection};
 
 use super::Data;
 // use std::collections::HashMap;

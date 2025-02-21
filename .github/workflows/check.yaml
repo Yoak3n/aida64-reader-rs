@@ -26,7 +26,7 @@ jobs:
 
       # Cargo build - Only 
       - name: Build - Only time feature
-        run: cargo build --no-default-features --features=wmis
+        run: cargo build --no-default-features --features=wmi
 
       # Cargo build - All features
       - name: Build - All features
@@ -49,9 +49,9 @@ jobs:
       # - name: Test - Only tests with the reg crate
       #   run: cargo test --tests --no-default-features --features=reg
 
-      #  Test - Only tests with the wmis crate
-      # - name: Test - Only tests with the wmis crate
-      #   run: cargo test --tests --features=wmis
+      #  Test - Only tests with the wmi crate
+      # - name: Test - Only tests with the wmi crate
+      #   run: cargo test --tests --features=wmi
 
   fmt:
     name: Rustfmt
