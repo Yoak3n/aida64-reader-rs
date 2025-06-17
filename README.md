@@ -5,10 +5,10 @@
 [dependencies]
 aida64-reader-rs = "*"
 
-# you can also choose feature "reg" (read data from registry) and feature "wmi" (read data from wmi)
+# you can also choose feature "reg" (read data from registry) and feature "wmis" (read data from wmi)
 # [dependencies]
 # aida64-reader-rs = {version = "*", default-features = false, feature = ["reg"] }
-# aida64-reader-rs = {version = "*", default-features = false, feature = ["wmi"] }
+# aida64-reader-rs = {version = "*", default-features = false, feature = ["wmis"] }
 
 ```
 
@@ -32,3 +32,6 @@ fn main() {
     }
 }
 ```
+
+## Reference
+How to set `aida64` to shared data of my own hardware? [Click to read](https://www.aida64.com/user-manual/hardware-monitoring/external-applications)
